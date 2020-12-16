@@ -1,0 +1,68 @@
+conky.config = {
+background = true,
+use_xft = true,
+font = 'Liberation Sans:size=9',
+xftalpha = 1,
+update_interval = 1.0,
+total_run_times = 0,
+own_window = true,
+own_window_transparent = false,
+own_window_type  = 'desktop',
+own_window_argb_visual  = true,
+own_window_argb_value = 50,
+own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+double_buffer  = true,
+maximum_width  = 230,
+draw_shades = false,
+draw_outline = false,
+draw_borders = true,
+draw_graph_borders = true,
+border_width = 2,
+stippled_borders = 0,
+default_color = 'white',
+alignment = 'top_right',
+gap_x = 25,
+gap_y = 120,
+no_buffers = true,
+uppercase = false,
+cpu_avg_samples = 1,
+override_utf8_locale = true,
+}
+
+conky.text = [[
+
+${goto 12}${font liberation sans:style=italic:size=9}Sistema $stippled_hr${font}
+ 
+${goto 12}${voffset 3}Distro:  SERBIAN 2020${font}
+${goto 12}${voffset 3}Кernel: ${alignr 8}${kernel}
+${goto 12}${voffset 3}Uptime:${alignr 10}${uptime}
+${goto 12}${voffset 3}CPU:${alignr 40}${cpu cpu1}%
+${goto 12}${voffset 3}RAM:${alignr 28}$mem
+${goto 12}${voffset 3}HD:${alignr 6}${fs_used /} / ${fs_size /} 
+
+${goto 12}${font liberation sans:style=italic:size=9}ATAJOS $stippled_hr${font}
+
+${goto 12}${voffset 3}Super+w			Firefox${font}
+${goto 12}${voffset 3}Super+f			pcmanfm${font}
+${goto 12}${voffset 3}Super+a			audacious${font}
+${goto 12}${voffset 3}Super+v			VLC${font}
+${goto 12}${voffset 3}Super+p			Imprimir${font}
+${goto 12}${voffset 3}Super+t			Terminal${font}
+${goto 12}${voffset 3}Super+e			Editor${font}
+${goto 12}${voffset 3}Super+z			Audio${font}
+${goto 12}${voffset 3}Super+x			Salir${font}
+${goto 12}${voffset 3}Super+Sp			Menú${font}
+${goto 12}${voffset 3}Alt+F2			Comando${font}
+${goto 12}${voffset 3}Ctrl+Shift			Teclado${font}
+${goto 12}${voffset 3}PrtScr				  Captura${font}
+
+${goto 12}${font liberation sans:style=italic:size=9}PROCESOS $stippled_hr${font}
+
+${goto 1}${goto 12}Comando: ${goto 183}CPU
+${voffset -0}${goto 12}${top name 1}${goto 178}${top cpu 1}${alignr 3}${font}
+${voffset -0}${goto 12}${top name 2}${goto 178}${top cpu 2}${alignr 3}${font}
+${voffset -0}${goto 12}${top name 3}${goto 178}${top cpu 3}${alignr 3}${font}
+${voffset -0}${goto 12}${top name 4}${goto 178}${top cpu 4}${alignr 3}${font}
+${voffset -0}${goto 12}${top name 5}${goto 178}${top cpu 5}${alignr 3}${font}
+
+]]
