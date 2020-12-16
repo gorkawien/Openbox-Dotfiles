@@ -1,0 +1,79 @@
+## Openbox autostart.sh
+## ====================
+
+##
+## Note*: some programs, such as 'nm-applet' are run via XDG autostart.
+## Run '/usr/lib/openbox/openbox-xdg-autostart --list' to list any
+## XDG autostarted programs.
+##
+## More information about this can be found at:
+## http://openbox.org/wiki/Help:Autostart
+##
+
+
+## Set root window colour
+hsetroot -solid "#2E3436" &
+
+## Group start:
+## 1. nitrogen - restores wallpaper
+## 2. compositor
+## 3. sleep - give compositor time to start
+## 4. conky
+## 5. panel
+(\
+nitrogen --restore && \
+compton -b
+conky -q && \
+tint2 & \
+) &
+
+## Enable hot corners
+
+
+##Control for systray
+(sleep 2s && pnmixer) &
+
+
+## Enable power management
+xfce4-power-manager &
+
+
+## Detect and configure touchpad. See 'man synclient' for more info.
+if egrep -iq 'touchpad' /proc/bus/input/devices; then
+    synclient VertEdgeScroll=1 &
+    synclient TapButton1=1 &
+fi
+
+## Start xscreensaver
+xscreensaver -no-splash &
+
+## Start Clipboard manager
+#(sleep 3s && clipit) &
+
+## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
+## Adjust the values according to your preferances.
+xset r rate 250 25 &
+
+## set keyboard maps
+setxkbmap -option "grp:ctrl_shift_toggle,grp_led:scroll" -layout "de,es" &
+(sleep 1s && fbxkb) &
+
+
+
+
+## Safe to delete after installation.
+
+(sleep 5s && killall -9 applet.py) &
+
+
+
+## GNOME PolicyKit and Keyring
+(\
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 && \
+/usr/bin/gnome-keyring-daemon --start --components=ssh && \
+/usr/bin/gnome-keyring-daemon --start --components=secrets && \
+/usr/bin/gnome-keyring-daemon --start --components=pkcs11 && \
+/usr/bin/gnome-keyring-daemon --start --components=gpg \
+) &
+
+xrandr -s 1920x1080 &

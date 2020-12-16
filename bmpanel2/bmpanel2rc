@@ -1,0 +1,6 @@
+bmpanel2 --theme=Auriel Olive
+launchbar
+	exec xdotool key super+space
+		icon /usr/share/icons/misc/serbian0.png
+theme auriel-olive-smooth
+clock_prog gsimplecal

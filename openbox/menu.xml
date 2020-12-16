@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="Navegador">
+			<action name="Execute">
+				<execute>
+				firefox-esr
+				</execute>
+			</action>
+		</item>
+		<item label="Gestor de Archivos">
+			<action name="Execute">
+				<execute>
+					pcmanfm
+				</execute>
+			</action>
+		</item>
+		<item label="Reproductor de Audio">
+			<action name="Execute">
+				<execute>audacious</execute>
+			</action>
+		</item>
+		<item label="Reproductor de Vídeo">
+			<action name="Execute">
+				<execute>vlc</execute>
+			</action>
+		</item>
+		<item label="Gestor de Paquetes">
+			<action name="Execute">
+				<execute>synaptic-pkexec</execute>
+			</action>
+		</item>
+		<item label="Тerminal">
+			<action name="Execute">
+				<execute>
+			    lxterminal --geometry=140x50
+				</execute>
+			</action>
+		</item>
+		<item label="Editor de Texto">
+			<action name="Execute">
+				<execute>
+			       mousepad
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="Ejecutar Comando">
+			<action name="Execute">
+				<execute>
+					gmrun
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="accessories" label="Accesorios">
+			<item label="Gdebi">
+				<action name="Execute">
+					<execute>
+						gdebi-gtk %f
+					</execute>
+				</action>
+			</item>
+			<item label="Catfish">
+				<action name="Execute">
+					<execute>catfish</execute>
+				</action>
+			</item>
+			<item label="Xarchiver">
+				<action name="Execute">
+					<execute>xarchiver</execute>
+				</action>
+			</item>
+			<item label="Clipit">
+				<action name="Execute">
+					<execute>
+						clipit
+					</execute>
+				</action>
+			</item>
+			<item label="Bleachbit">
+				<action name="Execute">
+					<execute>bleachbit</execute>
+				</action>
+			</item>
+            <item label="Grsync">
+				<action name="Execute">
+					<execute>grsync</execute>
+				</action>
+			</item>
+            <item label="Rosa Image Writer">
+				<action name="Execute">
+					<execute>pkexec /opt/RosaImageWriter/RosaImageWriter</execute>
+				</action>
+			</item>
+			<item label="Gestión de Impresoras">
+				<action name="Execute">
+					<execute>
+						system-config-printer
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="graphics" label="Gráficos">
+			<item label="Mirage">
+				<action name="Execute">
+					<execute>mirage</execute>
+				</action>
+			</item>
+			<item label="GIMP">
+				<action name="Execute">
+					<execute>
+						gimp
+					</execute>
+				</action>
+			</item>
+                         <item label="Gcolor 2">
+				<action name="Execute">
+					<execute>
+				       gcolor2
+					</execute>
+				</action>
+			</item>
+			<menu id="graphicsScreenshots" label="Captura">
+				<item label="Captura de Pantalla">
+					<action name="Execute">
+						<execute>
+							xfce4-screenshooter
+						</execute>
+					</action>
+				</item>
+				<separator label="Cuando"/>
+				<item label="Ahora">
+					<action name="Execute">
+						<execute>
+							scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/ &amp; mirage ~/$f'
+						</execute>
+					</action>
+				</item>
+				<item label="En 5 segundos...">
+					<action name="Execute">
+						<execute>
+							scrot -d 5 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/ &amp; mirage ~/$f'
+						</execute>
+					</action>
+				</item>
+				<item label="En 10 segundos...">
+					<action name="Execute">
+						<execute>
+							scrot -d 10 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/ &amp; mirage ~/$f'
+						</execute>
+					</action>
+				</item>
+				<item label="Selecionar Superficie... (користи миш)">
+					<action name="Execute">
+						<execute>
+							scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/ &amp; mirage ~/$f'
+						</execute>
+					</action>
+				</item>
+			</menu>
+		</menu>
+		<menu id="multimedia" label="Multimedia">
+			<item label="Guvcview">
+				<action name="Execute">
+					<execute>/usr/bin/guvcview</execute>
+				</action>
+			</item>
+			<item label="SMPlayer">
+				<action name="Execute">
+					<execute>
+					smplayer
+					</execute>
+				</action>
+			</item>
+			<item label="Curlew">
+				<action name="Execute">
+					<execute>
+				        curlew
+					</execute>
+				</action>
+			</item>
+			<item label="Pavucontrol">
+				<action name="Execute">
+					<execute>
+						pavucontrol
+					</execute>
+				</action>
+			</item>
+			<item label="Brasero">
+				<action name="Execute">
+					<execute>
+					 brasero
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="network" label="Internet">
+			<item label="Geary">
+				<action name="Execute">
+					<execute>geary</execute>
+				</action>
+			</item>
+			<item label="Hexchat">
+				<action name="Execute">
+					<execute>hexchat</execute>
+				</action>
+			</item>
+			<item label="Transmission">
+				<action name="Execute">
+					<execute>transmission-gtk</execute>
+				</action>
+			</item>
+			<item label="GajIM">
+				<action name="Execute">
+					<execute>gajim</execute>
+				</action>
+			</item>
+			<item label="UGET">
+				<action name="Execute">
+					<execute>uget-gtk</execute>
+				</action>
+			</item>
+			<item label="Liferea">
+				<action name="Execute">
+					<execute>liferea</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="office" label="Oficina">
+			<item label="OSMO">
+				<action name="Execute">
+					<execute>osmo</execute>
+				</action>
+			</item>
+			<item label="Evince">
+				<action name="Execute">
+					<execute>
+					 evince
+					</execute>
+				</action>
+			</item>
+			<item label="Galculator">
+				<action name="Execute">
+					<execute>
+						galculator
+					</execute>
+				</action>
+			</item>
+			<item label="Abiword">
+				<action name="Execute">
+					<execute>
+						abiword
+					</execute>
+				</action>
+			</item>
+			<item label="Gnumeric">
+				<action name="Execute">
+					<execute>
+						gnumeric
+					</execute>
+				</action>
+			</item>
+			<item label="Geany">
+				<action name="Execute">
+					<execute>
+				        geany
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<menu id="settings" label="Ajustes">
+			<menu id="obConfig" label="Editar Openbox">
+				<item label="Editar menu.xml">
+					<action name="Execute">
+						<execute>
+							mousepad ~/.config/openbox/menu.xml
+						</execute>
+					</action>
+				</item>
+				<item label="Editar rc.xml">
+					<action name="Execute">
+						<execute>
+							mousepad ~/.config/openbox/rc.xml
+						</execute>
+					</action>
+				</item>
+				<item label="Editar Autostart">
+					<action name="Execute">
+						<execute>
+							mousepad ~/.config/openbox/autostart
+						</execute>
+					</action>
+				</item>
+				<separator/>
+				<item label="Obmenu">
+					<action name="Execute">
+						<execute>
+							obmenu
+						</execute>
+					</action>
+				</item>
+				<item label="Obapps">
+					<action name="Execute">
+						<execute>
+							obapps
+						</execute>
+					</action>
+				</item>
+				<item label="Obconf">
+					<action name="Execute">
+						<execute>
+							obconf
+						</execute>
+					</action>
+				</item>
+				<separator/>
+				<item label="Reiniciar">
+					<action name="Restart"/>
+				</item>
+				
+			</menu>
+			<menu id="comptonconfig" label="Compton">
+				<item label="Configuración">
+					<action name="Execute">
+						<execute>
+							mousepad ~/.config/compton.conf
+						</execute>
+					</action>
+				</item>
+				<separator label="Compton"/>
+				<item label="Manual">
+					<action name="Execute">
+						<execute>
+						 lxterminal --command=&quot;man compton&quot;
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="conkyconfig" label="Conky">
+				<item label="Editar .conkyrc">
+					<action name="Execute">
+						<execute>
+							mousepad ~/.conkyrc
+						</execute>
+					</action>
+				</item>
+				<item label="Cerrar Conky">
+					<action name="Execute">
+						<execute>
+						 killall -SIGUSR1 conky
+						</execute>
+					</action>
+				</item>
+				<separator label="Ayuda?"/>
+				<item label="Manual Conky">
+					<action name="Execute">
+						<execute>
+							lxterminal --command=&quot;man conky&quot;
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="configterminator" label="Terminal">
+				<item label="Измени конф. фајл">
+					<action name="Execute">
+						<execute>
+							mousepad ~/.config/lxterminal/lxterminal.conf
+						</execute>
+					</action>
+				</item>
+				<separator label="Помоћ?"/>
+				<item label="Упутство">
+					<action name="Execute">
+						<execute>
+							lxterminal --command=&quot;man lxterminal&quot;
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="tint2config" label="Configuración Tint2">
+				<item label="Измени конф. фајл">
+					<action name="Execute">
+						<execute>
+						mousepad ~/.config/tint2/tint2rc
+						</execute>
+					</action>
+				</item>
+				<separator label="Помоћ?"/>
+				<item label="Упутство">
+					<action name="Execute">
+						<execute>
+							lxterminal --command=&quot;man tint2&quot;
+						</execute>
+					</action>
+				
+			</menu>
+			<menu id="DisplaySettings" label="Configuración del Monitor">
+				<item label="Подешавање екрана">
+					<action name="Execute">
+						<execute>
+						    lxrandr
+					    </execute>
+					</action>
+				</item>
+				<separator label="Personalización"/>
+				<item label="Monitor">
+					<action name="Execute">
+						<execute>
+						    lxterminal --command=&quot;man xrandr&quot;
+					    </execute>
+					</action>
+				</item>
+			</menu>
+			<item label="Aplicaciones preferidas">
+				<action name="Execute">
+					<execute>
+						libfm-pref-apps
+					</execute>
+				</action>
+			</item>
+			<item label="Apariencía">
+				<action name="Execute">
+					<execute>
+						lxappearance
+					</execute>
+				</action>
+			</item>
+			<item label="Obkey">
+				<action name="Execute">
+					<execute>obkey</execute>
+				</action>
+			</item>
+			<item label="Gestión de la Energia">
+				<action name="Execute">
+					<execute>
+						xfce4-power-manager-settings
+					</execute>
+				</action>
+			</item>
+			<item label="Чувар екрана">
+				<action name="Execute">
+					<execute>
+						xscreensaver-demo
+					</execute>
+				</action>
+			</item>
+			<item label="Nitrogen">
+				<action name="Execute">
+					<execute>
+						nitrogen
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="system" label="Sistema">
+			<item label="Gestor de archivos (root)">
+				<action name="Execute">
+					<execute>
+						pkexec pcmanfm /
+					</execute>
+				</action>
+			</item>
+			<item label="Editar repositorios">
+				<action name="Execute">
+					<execute>
+						pkexec mousepad /etc/apt/sources.list
+					</execute>
+				</action>
+			</item>
+            <item label="Logs del Sistema">
+				<action name="Execute">
+					<execute>
+						pkexec /usr/bin/gnome-system-log
+					</execute>
+				</action>
+			</item>
+			<item label="Información del Sistema">
+				<action name="Execute">
+					<execute>
+				       xterm -fa 'Monospace' -fs 12 -hold -e inxi -F
+					</execute>
+				</action>
+			</item>
+			<item label="Lxtask">
+				<action name="Execute">
+					<execute>/usr/bin/lxtask</execute>
+				</action>
+			</item>
+			<item label="Htop">
+				<action name="Execute">
+					<execute>lxterminal --command=htop</execute>
+				</action>
+			</item>
+			<item label="Gparted">
+				<action name="Execute">
+					<execute>
+						pkexec /usr/sbin/gparted
+					</execute>
+				</action>
+			</item>
+			<menu id="help" label="Gestor de Acceso ">
+				<item label="Configuración Lightdm">
+					<action name="Execute">
+						<execute>
+					pkexec mousepad /etc/lightdm/lightdm.conf
+					</execute>
+					</action>
+				</item>
+				
+			</menu>
+		</menu>
+		<separator/>
+		<item label="Bloquear">
+			<action name="Execute">
+				<execute>
+			       xdg-screensaver lock
+				</execute>
+			</action>
+		</item>
+		<item label="Salir">
+			<action name="Execute">
+				<execute>
+				oblogout
+				</execute>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>
